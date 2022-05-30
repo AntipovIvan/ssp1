@@ -1,3 +1,14 @@
+<?php
+
+if (isset($_POST['return'])) {
+    // echo '<script>alert("Fired")</script>';
+    setcookie(session_name(), '', 100);
+    session_unset();
+    $_SESSION = array();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -5,14 +16,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>練習問題</title>
+    <title>実技試験</title>
 </head>
 
 <body>
-    <form method="POST" action="shop2.php">
-        <h2>練習問題</h2>
-        <h2>
-            <?php
+    <h2>
+        <?php
             date_default_timezone_set("Asia/Tokyo");
             if (date('H:i:s') < '12:00:00' && date('H:i:s') > '06:00:00') {
                 echo "午前 " 
@@ -27,7 +36,8 @@
                 . "<br>";
             }
         ?>
-        </h2>
+    </h2>
+    <form method="POST" action="shop2.php">
         <p>ユーザー名: <input type="text" name="name" /></p>
         <p>パスワード: <input type="password" name="password" /></p>
         <input type="submit" name="submit" value="Submit" />

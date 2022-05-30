@@ -1,16 +1,17 @@
 <?php
-    $name = $_POST["name"];
-    $password = $_POST["password"];
-    $_SESSION["password"] = $_POST["password"];
+   
     if(!isset($_POST["submit"])) {
         exit("<h2>Access Denied</h2>");
     } else {
-        if ($password == "0000" && $name == "Ivan") {
+        $name = $_POST["name"];
+        $password = $_POST["password"];
+        $_SESSION["password"] = $_POST["password"];
+        if ($password == "771" && $name == "aw") {
             session_start();
             $_SESSION["name"] = $_POST["name"];
         }
         else {
-            header("Location: ren.html");
+            header("Location: shop1.php");
         }
     }
 ?>
@@ -22,19 +23,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>練習問題</title>
+    <title>実技試験</title>
 </head>
 
 <body>
     <div class="message">
-        <h2>練習問題</h2>
         <?php
-            print " <p>Welcome! "
+            print "<p>"
                 .$name
-                ."-san</p>";
+                ."さん　こんにちは。</p>";
         ?>
-        <form method="POST" action="renData.php">
-            <h2>Select stuff</h2>
+        <h2>Select stuff</h2>
+        <form method="POST" action="shop3.php">
             <p>Rice 1kg 500 yen
                 <select name="rice" id="">
                     <option value=0 selected>Select quantity</option>
@@ -76,7 +76,7 @@
                 <option value=8>China Mac Book</option>
                 <option value=2>China Samsung</option>
             </select><br> -->
-            <input type="submit" name="submit" value="Buy" />
+            <input type="submit" name="submit" value="購入" />
         </form>
     </div>
 
