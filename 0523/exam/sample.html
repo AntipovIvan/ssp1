@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST" action="ren.php">
+      <h2>練習問題</h2>
+      <p>名前: <input type="text" name="name" /></p>
+      <p>住所: <input type="text" name="address" /></p>
+      <p>電話番号: <input type="tel" name="tel" /></p>
+      <p>
+        お届け時間：
+        <select name="time" id="">
+          <option value="指定なし" selected>指定なし</option>
+          <option value="午前中">午前中</option>
+          <option value="午後1時～5時">午後1時～5時</option>
+          <option value="午後6時～9時">午後6時～9時</option>
+        </select>
+      </p>
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+</html>

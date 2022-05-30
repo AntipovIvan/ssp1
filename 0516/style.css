@@ -1,0 +1,45 @@
+/* body {
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  margin: 12% auto;
+} */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  background-color: blue;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 10% auto;
+  max-width: 500px;
+  box-shadow: 10px 5px 5px black;
+}
+
+input[type='text'],
+input[type='password'] {
+  border-radius: 6px;
+  border-color: blue;
+  border-width: 1px;
+  padding: 5px;
+}
+
+p {
+  background-color: blue;
+  border-radius: 6px;
+  border-width: 1px;
+  padding: 5px;
+  color: wheat;
+}
+
+input[type='submit'] {
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  font-size: large;
+  border-color: white;
+  background-color: blue;
+  color: wheat;
+}
