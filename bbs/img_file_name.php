@@ -20,7 +20,7 @@
         } else {
             $imgname = date("Ymd-His")
                 ."-"
-                .rand(1000.9999)
+                .rand(1000,9999)
                 ."."
                 .$ext;
             if (move_uploaded_file($_FILES[$f]["tmp_name"], $dir.$imgname)) {
